@@ -16,12 +16,17 @@ class Snake:
 
     def create_snake(self):
         for position in STARTING_POSITIONS:
-            turtle = Turtle("square")
-            turtle.color("white")
-            turtle.penup()
-            turtle.goto(position)
-            self.segments.append(turtle)
+            self.add_segment(position)
 
+    def add_segment(self, position):
+        turtle = Turtle("square")
+        turtle.color("white")
+        turtle.penup()
+        turtle.goto(position)
+        self.segments.append(turtle)
+
+    def extend(self):
+        self.add_segment(self.segments[-1].position()) # get hold of last segment in list (-1 is last element)
 
 
     def move(self):
@@ -44,8 +49,5 @@ class Snake:
         if self.head.heading() != LEFT:
             self.head.setheading(RIGHT)
 
-    def add_segment(self):
-        turtle = Turtle("square")
-        turtle.color("white")
-        turtle.penup()
-        self.segments.append(turtle)
+
+
