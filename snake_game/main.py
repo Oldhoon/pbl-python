@@ -32,6 +32,7 @@ while game_is_on:
     # detect collision with turtle distance method
     if snake.head.distance(food) < 15:
         scoreboard.increase_score()
+        snake.add_segment()
         food.refresh()
 
 
