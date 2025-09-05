@@ -13,6 +13,7 @@ class Snake:
         self.create_snake()
         self.head = self.segments[0]
 
+
     def create_snake(self):
         for position in STARTING_POSITIONS:
             turtle = Turtle("square")
@@ -20,6 +21,7 @@ class Snake:
             turtle.penup()
             turtle.goto(position)
             self.segments.append(turtle)
+
 
 
     def move(self):
