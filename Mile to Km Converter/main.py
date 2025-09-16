@@ -15,7 +15,7 @@ label.grid(column=0, row=1)
 
 #output
 output = Label(text="0", font=("Arial", 24, "bold"))
-output.grid(column=1, row=0)
+output.grid(column=1, row=1)
 
 
 #units
